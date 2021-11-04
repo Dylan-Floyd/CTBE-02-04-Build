@@ -1,3 +1,5 @@
+const { getMethod } = require('./index.js');
+
 describe('http getMethod tests', () => {
 
   test('calling getMethod with a GET request returns GET', () => {
@@ -8,7 +10,7 @@ describe('http getMethod tests', () => {
     const expected = 'GET';
     
     expect(actual).toEqual(expected);
-  })
+  });
 
   test('calling getMethod with a DELETE request returns DELETE', () => {
     const actual = getMethod(
