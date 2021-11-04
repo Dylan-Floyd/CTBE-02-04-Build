@@ -14,10 +14,11 @@ describe('http getMethod tests', () => {
 
   test('calling getMethod with a DELETE request returns DELETE', () => {
     const actual = getMethod(
-      'DELETE / HTTP/1.1' +
-      'Host: example.com' +
-      'Accept-Language: us-en');
+      'DELETE / HTTP/1.1\n\r' +
+      'Host: example.com\n\r' +
+      'Accept-Language: us-en\n\r');
     const expected = 'DELETE';
+
     expect(actual).toEqual(expected);
   });
 });
